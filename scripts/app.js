@@ -5,7 +5,7 @@ angular
   .run(function($route, $rootScope) {
     console.log("Caleb app starting");
   })
-  .config(function ($routeProvider) {
+  .config(function ($routeProvider, $locationProvider) {
    //adding routes and controllers to $route service
     $routeProvider
       .when('../', {
