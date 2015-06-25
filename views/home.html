@@ -1,0 +1,69 @@
+<section id="header">
+	<div class="headerContainer">
+		<div class="masthead">
+		<a href="/#/">
+			<img class="logo" src="./images/logo.png">
+			<h1 class="logo">Caleb Heisey</h1>
+		</a>
+		</div>
+		<nav id="nav" navigation-dir>
+			<div class="navWrap">
+				<h1 class="logo" aria-hide="true"><a nav-dir ng-click="scrollHeader()" href="/#/">Caleb Heisey</a></h1>
+				<div class="navContain">
+					<ul class="navList">
+						<li class="navItem"><a data-text="About" href="/#/about">About</a></li>
+						<li class="navPipe" aria-hidden="true">|</li>
+						<li class="navItem" nav-dir ng-click="scrollFooter()"><a data-text="Contact" >Contact</a></li>
+						<li class="navPipe" aria-hidden="true">|</li>
+					</ul>
+					<ul class="socialNav">
+						<li class="social icon-instagram"><a target="_blank" href="https://instagram.com/calebheisey/"><span class="screen-reader-text">Instagram</span></a></li>
+						<li class="social icon-dribble"><a target="_blank" href="https://dribbble.com/calebheisey"><span class="screen-reader-text">Dribbble</span></a></li>
+						<li class="social icon-twitter"><a target="_blank" href="https://twitter.com/calebheisey"><span class="screen-reader-text">Twitter</span></a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</div>
+</section>
+<main id="mainContent">
+	<div class="container">
+		<nav class="tags">
+			<ul>
+				<li class="tag">
+					<a class="active" ng-click="filterType = '';select('all')" ng-class="{active: isActive('all')}">All Work</a>
+				</li>
+				<li class="tag">
+					<a ng-click="filterType = {project_type: 'marks-badges'};select('marks-badges')" ng-class="{active: isActive('marks-badges')}">Marks &amp; Badges</a>
+				</li>
+				<li class="tag">
+					<a ng-click="filterType = {project_type: 'illustration'};select('illustration')" ng-class="{active: isActive('illustration')}">Illustration</a>
+				</li>
+				<li class="tag">
+					<a ng-click="filterType = {project_type: 'print-packaging'};select('print-packaging')" ng-class="{active: isActive('print-packaging')}">Print &amp; Packaging</a>
+				</li>
+				<!-- <li class="tag">
+					<a ng-click="filterType = {project_type: 'interactive'};select('interactive')" ng-class="{active: isActive('interactive')}">Interactive</a>
+				</li> -->
+			</ul>
+		</nav>
+		<article ng-repeat="p in projects | filter: filterType" class="project">
+			<flex-slider slide="s in p.images track by $index" slideshow-speed="4000" animation-speed="600" control-nav="false" direction-nav="false" touch="true">
+			    <li>
+			        <img ng-src="{{s.sizes[pf]}}" draggable="true">
+			    </li>
+			</flex-slider>
+			<div class="projectInfo">
+				<h1 ng-bind-html="p.title"></h1>
+				<span class="projectDetails">{{p.subtext}}</span>
+			</div>
+		</article>
+	</div>
+</main>
+<footer id="footer">
+	<img class="footerLogo" src="./images/logo.png">
+	<span class="contact">Get In Touch!</span>
+	<a class="email user-select">HeiseyCB@gmail.com</a>
+	<span class="or">or</span>
+	<a class="learn" href="/#/about">Learn more about me</a>
+</footer>

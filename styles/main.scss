@@ -1,0 +1,58 @@
+@import "modules/variables";
+@import "modules/fancy";
+@import "modules/projects";
+
+
+//Main styles here
+* {
+	box-sizing: border-box;
+	
+}
+
+html{
+	//Below prevent text highlighting
+	@include highlightText(none);
+	font-smoothing: always;
+	text-rendering: optimizeLegibility!important;
+    -webkit-font-smoothing: antialiased!important;
+    -moz-osx-font-smoothing: grayscale;
+}
+body, html{
+	@include font-size(16);
+}
+
+.container{
+	max-width: 1440px;
+	margin: 0 auto;
+	width: 100%;	
+}
+
+h1{
+	@include font-size(60);
+}
+
+h2{
+	@include font-size(40);
+}
+
+h3{
+	@include font-size(30);
+}
+
+p{
+	@include font-size(16);
+	color: $black;
+}
+
+a{
+	text-decoration: none;
+	&:visited, &:active, &:focus{
+
+	}
+	&:hover{
+	}
+}
+
+
+
+
