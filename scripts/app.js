@@ -12,6 +12,10 @@ angular
         templateUrl: 'views/home.html',
         controller: 'MainCtrl'
       })
+      .when('/new-virtuoso', {
+        templateUrl: 'views/home.html',
+        controller: 'MainCtrl'
+      })
       .when('/about', {
         templateUrl: 'views/about.html'
       })
