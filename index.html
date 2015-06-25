@@ -40,7 +40,7 @@
     h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='//use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
   })(document);
 </script>
-<base href="/calebwebsite">
+<base href="/">
 </head>
 <body ng-app="caleb" >
 	<ng-view autoscroll="true"></ng-view>
@@ -49,11 +49,11 @@
 <script type="text/javascript" src="scripts/lib/angular.js"></script>
 <script type="text/javascript" src="scripts/lib/angular-route.js"></script>
 <script type="text/javascript" src="scripts/lib/angular-sanitize.js"></script>
-<script src="scripts/app.js"></script>
-<script src="scripts/controllers/main.js"></script>
-<script src="scripts/services/loadData.js"></script>
-<script src="scripts/directives/navDir.js"></script>
+<script src="calebwebsite/scripts/app.js"></script>
+<script src="calebwebsite/scripts/controllers/main.js"></script>
+<script src="calebwebsite/scripts/services/loadData.js"></script>
+<script src="calebwebsite/scripts/directives/navDir.js"></script>
 <script type="text/javascript" src="scripts/lib/jquery.flexslider.js"></script>
-<script src="scripts/directives/angular-flexslider.js"></script>
-<script src="scripts/directives/navigationDir.js"></script>
+<script src="calebwebsite/scripts/directives/angular-flexslider.js"></script>
+<script src="calebwebsite/scripts/directives/navigationDir.js"></script>
 </html>
