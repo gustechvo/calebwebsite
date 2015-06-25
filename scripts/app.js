@@ -8,7 +8,7 @@ angular
   .config(function ($routeProvider) {
    //adding routes and controllers to $route service
     $routeProvider
-      .when('/', {
+      .when('../', {
         templateUrl: 'views/home.html',
         controller: 'MainCtrl'
       })
@@ -24,6 +24,8 @@ angular
         templateUrl: 'views/home.html',
         controller: 'MainCtrl'
       });
+      // use the HTML5 History API
+      $locationProvider.html5Mode(true);
   });
 
 
