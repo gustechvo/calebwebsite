@@ -5,14 +5,10 @@ angular
   .run(function($route, $rootScope) {
     console.log("Caleb app starting");
   })
-  .config(function ($routeProvider, $locationProvider) {
+  .config(function ($routeProvider) {
    //adding routes and controllers to $route service
     $routeProvider
-      .when('../', {
-        templateUrl: 'views/home.html',
-        controller: 'MainCtrl'
-      })
-      .when('/new-virtuoso', {
+      .when('/', {
         templateUrl: 'views/home.html',
         controller: 'MainCtrl'
       })
@@ -24,8 +20,6 @@ angular
         templateUrl: 'views/home.html',
         controller: 'MainCtrl'
       });
-      // use the HTML5 History API
-      $locationProvider.html5Mode(true);
   });
 
 

@@ -42,6 +42,18 @@ angular.module('caleb').controller('MainCtrl', function ($scope,$rootScope, Load
   $rootScope.randomOffset = function(){
     return Math.floor(Math.random() * 3000);
   }
+
+  $scope.slideshow = {};
+  $scope.slideshow.start = function(slider){
+    $.flexloader(slider);
+    console.log('start');
+  };
+
+  $scope.slideshow.after = function(slider){
+    $.flexloader(slider);
+    console.log('after');
+  };
+
 })
 
 

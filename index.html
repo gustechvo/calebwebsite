@@ -9,6 +9,10 @@
     <meta name="viewport" content="minimal-ui, width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="description" content="Hello! I'm Caleb, a designer and illustrator living in the great city of Philadelphia.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="styles/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="styles/demo.css" />
+		<link rel="stylesheet" type="text/css" href="styles/effect1.css" />
     <link rel="apple-touch-icon" sizes="57x57" href="favicons/apple-touch-icon-57x57.png">
 	<link rel="apple-touch-icon" sizes="60x60" href="favicons/apple-touch-icon-60x60.png">
 	<link rel="apple-touch-icon" sizes="72x72" href="favicons/apple-touch-icon-72x72.png">
@@ -31,6 +35,7 @@
 	<meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" type="text/css" href="styles/flexslider.css">
     <link rel="stylesheet" href="styles/styles.css">
+    <script type="text/javascript" src="scripts/lib/modernizr.custom.js"></script>
     <script>
   (function(d) {
     var config = {
@@ -40,20 +45,36 @@
     h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='//use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
   })(document);
 </script>
-<base href="/">
 </head>
 <body ng-app="caleb" >
+		<div id="ip-container" class="ip-container">
+			<!-- initial header -->
+			<header class="ip-header">
+				<div class="ip-loader">
+					<svg class="ip-inner" width="60px" height="60px" viewBox="0 0 80 80">
+						<path class="ip-loader-circlebg" d="M40,10C57.351,10,71,23.649,71,40.5S57.351,71,40.5,71 S10,57.351,10,40.5S23.649,10,40.5,10z"/>
+						<path id="ip-loader-circle" class="ip-loader-circle" d="M40,10C57.351,10,71,23.649,71,40.5S57.351,71,40.5,71 S10,57.351,10,40.5S23.649,10,40.5,10z"/>
+					</svg>
+				</div>
+			</header>
+
+		</div>
 	<ng-view autoscroll="true"></ng-view>
 </body>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
-<script type="text/javascript" src="calebwebsite/scripts/lib/angular.js"></script>
-<script type="text/javascript" src="calebwebsite/scripts/lib/angular-route.js"></script>
-<script type="text/javascript" src="calebwebsite/scripts/lib/angular-sanitize.js"></script>
-<script src="calebwebsite/scripts/app.js"></script>
-<script src="calebwebsite/scripts/controllers/main.js"></script>
-<script src="calebwebsite/scripts/services/loadData.js"></script>
-<script src="calebwebsite/scripts/directives/navDir.js"></script>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
+<script type="text/javascript" src="scripts/lib/classie.js"></script>
+<script type="text/javascript" src="scripts/lib/pathLoader.js"></script>
+<script type="text/javascript" src="scripts/lib/spinloader.js"></script>
+<script type="text/javascript" src="scripts/lib/angular.js"></script>
+<script type="text/javascript" src="scripts/lib/angular-route.js"></script>
+<script type="text/javascript" src="scripts/lib/angular-sanitize.js"></script>
+<script src="scripts/app.js"></script>
+<script src="scripts/controllers/main.js"></script>
+<script src="scripts/services/loadData.js"></script>
+<script src="scripts/directives/navDir.js"></script>
 <script type="text/javascript" src="scripts/lib/jquery.flexslider.js"></script>
-<script src="calebwebsite/scripts/directives/angular-flexslider.js"></script>
-<script src="calebwebsite/scripts/directives/navigationDir.js"></script>
+<script src="scripts/directives/angular-flexslider.js"></script>
+<script src="bower_components/flexloader/dist/jquery.flexloader.js"></script>
+<script src="scripts/directives/navigationDir.js"></script>
 </html>
